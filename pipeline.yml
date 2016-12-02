@@ -1,0 +1,28 @@
+---
+jobs:
+- name: build
+  public: true
+  plan:
+  - get: dallas-meetup
+    trigger: true
+  - put: cf
+    params:
+      manifest: dallas-meetup/manifest.yml
+      current_app_name: {{cf-app-name}}
+
+resources:
+- name: dallas-meetup
+  type: git
+  source:
+    uri: {{git-uri}}
+    branch: {{git-uri}}
+
+- name: cf
+  type: cf
+  source:
+    api: {{cf-api-url}}
+    skip_cert_check: true
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-org}}
+    space: {{cf-space}}

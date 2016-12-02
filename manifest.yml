@@ -1,0 +1,9 @@
+---
+applications:
+- name: dallas-meetup-december
+  host: dallas-meetup-december
+  memory: 64M
+  disk: 64M
+  instances: 3
+  path: content
+  buildpack: staticfile_buildpack
