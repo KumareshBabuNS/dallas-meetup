@@ -1,7 +1,7 @@
 ---
 applications:
-- name: dallas-meetup-december
-  host: dallas-meetup-december
+- name: dallas-meetup-march
+  host: dallas-meetup-march
   memory: 64M
   disk: 64M
   instances: 3
