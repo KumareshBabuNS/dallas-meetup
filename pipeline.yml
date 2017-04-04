@@ -8,7 +8,6 @@ jobs:
   - put: cf
     params:
       manifest: dallas-meetup/manifest.yml
-      current_app_name: {{cf-app-name}}
 
 resources:
 - name: dallas-meetup
