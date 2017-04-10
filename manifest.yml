@@ -6,4 +6,3 @@ applications:
   disk: 64M
   instances: 3
   path: content
-  buildpack: staticfile_buildpack
